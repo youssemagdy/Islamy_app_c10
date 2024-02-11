@@ -14,7 +14,7 @@ class HomeScreenIslamy extends StatefulWidget
 }
 
 class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
-  int currentNavIndex = 0;
+  int currentNavIndex = 3;
   List<Widget> navWidget =
   [
     RadioWidget(),

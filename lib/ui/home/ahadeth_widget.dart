@@ -39,7 +39,7 @@ class _AhadethWidgetState extends State<AhadethWidget>
             child: allAhadeth.isEmpty
                 ?const Center(child: CircularProgressIndicator(),)
                 :ListView.separated(
-                itemBuilder: (context, index) => AhadethTitleItem(hadeth: allAhadeth[index]),
+                itemBuilder: (context, index) => AhadethTitleItem(ahadeth: allAhadeth[index]),
                 separatorBuilder: (context, index){
                 return Container(
                   width: double.infinity,

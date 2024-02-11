@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/ui/ahadeth_details/ahadth_details.dart';
 import 'package:islamy_app/ui/home/ahadth_model.dart';
 
 class AhadethTitleItem extends StatelessWidget
 {
-  AhadthModel hadeth;
+  AhadthModel ahadeth;
 
-  AhadethTitleItem ({Key? key, required this.hadeth}) : super(key: key);
+  AhadethTitleItem ({Key? key, required this.ahadeth}) : super(key: key);
 
   @override
   Widget build(BuildContext context)
   {
-    return Text(
-      hadeth.title,
-      textAlign: TextAlign.center,
-      style: const TextStyle(
-        fontSize: 18,
+    return InkWell(
+      onTap: ()
+      {
+        Navigator.pushNamed(context, AgadethDetailsScreen.routeName,arguments: ahadeth);
+      },
+      child: Text(
+        ahadeth.title,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontSize: 18,
+        ),
       ),
     );
   }
