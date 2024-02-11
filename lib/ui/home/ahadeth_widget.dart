@@ -7,8 +7,10 @@ class AhadethWidget extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      color: Colors.redAccent,
+    return Column(
+      children: [
+        Image.asset('assets/image/ahadeth_image.png',),
+      ],
     );
   }
 }
