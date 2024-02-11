@@ -10,6 +10,7 @@ class AhadethWidget extends StatelessWidget
     return Column(
       children: [
         Image.asset('assets/image/ahadeth_image.png',),
+        Text(''),
       ],
     );
   }
