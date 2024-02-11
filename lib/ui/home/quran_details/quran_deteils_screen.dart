@@ -50,8 +50,8 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
               itemCount: lines.length
           ) :
           const Center(
-            child: CircularProgressIndicator(),
-          ),
+             child: CircularProgressIndicator(),
+            ),
           ),
         ),
       );
