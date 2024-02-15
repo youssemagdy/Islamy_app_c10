@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/ui/home/quran_widget.dart';
-import 'package:islamy_app/ui/home/radio_widget.dart';
-import 'package:islamy_app/ui/home/sebha_widget.dart';
-
-import 'ahadeth_widget.dart';
+import 'package:islamy_app/ui/home/taps/ahadeth_widget.dart';
+import 'package:islamy_app/ui/home/taps/quran_widget.dart';
+import 'package:islamy_app/ui/home/taps/radio_widget.dart';
+import 'package:islamy_app/ui/home/taps/sebha_widget.dart';
 
 class HomeScreenIslamy extends StatefulWidget
 {
@@ -86,6 +85,16 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
                   )
               ),
               label: 'Quran',
+            ),
+            BottomNavigationBarItem(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              icon: IconButton(
+                  onPressed: (){},
+                  icon: const Icon(
+                    Icons.settings,
+                  )
+              ),
+              label: 'Setting',
             ),
           ],
         ),

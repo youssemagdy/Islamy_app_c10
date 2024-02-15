@@ -5,7 +5,7 @@
         <!-- Show a splash screen on the activity. Automatically removed when
              the Flutter engine draws its first frame -->
         <item name="android:windowBackground">@drawable/splash</item>
-        <item name="android:windowSplashScreenBackground">#ffffff</item>
+        <item name="android:windowSplashScreenBackground">@drawable/bg2</item>
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo2</item>
     </style>
     <!-- Theme applied to the Android Window as soon as the process has started.
