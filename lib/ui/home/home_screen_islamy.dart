@@ -3,6 +3,7 @@ import 'package:islamy_app/ui/home/taps/ahadeth_widget.dart';
 import 'package:islamy_app/ui/home/taps/quran_widget.dart';
 import 'package:islamy_app/ui/home/taps/radio_widget.dart';
 import 'package:islamy_app/ui/home/taps/sebha_widget.dart';
+import 'package:islamy_app/ui/home/taps/setting_widget.dart';
 
 class HomeScreenIslamy extends StatefulWidget
 {
@@ -20,6 +21,7 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
     SabhaWidget(),
     AhadethWidget(),
     QuranWidget(),
+    SettingWidget(),
   ];
   @override
   Widget build(BuildContext context)
@@ -88,11 +90,8 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
-              icon: IconButton(
-                  onPressed: (){},
-                  icon: const Icon(
+              icon: const Icon(
                     Icons.settings,
-                  )
               ),
               label: 'Setting',
             ),
