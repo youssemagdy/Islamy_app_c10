@@ -8,7 +8,7 @@ class SabhaWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      color: Colors.yellow,
+      color: const Color(0xFF141A2E),
     );
   }
 }

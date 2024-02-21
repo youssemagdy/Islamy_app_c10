@@ -33,6 +33,10 @@ class QuranWidget extends StatelessWidget
             'assets/image/qur2an_screen_logo.png',
           ),
         ),
+        Text(
+          'Chapter Title',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
         Expanded(
           flex: 2,
           child: ListView.separated(
@@ -51,7 +55,7 @@ class QuranWidget extends StatelessWidget
                   width: double.infinity,
                   margin: const EdgeInsets.all(5),
                   height: 2,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).dividerColor,
                 );
               },
               itemCount: suraNames.length,

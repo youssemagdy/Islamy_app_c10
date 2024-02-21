@@ -8,7 +8,7 @@ class RadioWidget extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      color: Colors.tealAccent,
+      color: const Color(0xFF141A2E),
     );
   }
 }

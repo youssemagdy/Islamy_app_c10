@@ -19,9 +19,7 @@ class AhadethTitleItem extends StatelessWidget
       child: Text(
         ahadeth.title,
         textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 18,
-        ),
+        style: Theme.of(context).textTheme.labelMedium,
       ),
     );
   }

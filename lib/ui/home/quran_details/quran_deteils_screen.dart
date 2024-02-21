@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamy_app/style/app_theme.dart';
 
 class QuranDetailsScreen extends StatefulWidget
 {
@@ -19,10 +20,10 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
       readQuranFile(args.index);
     }
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                'assets/image/default_bg.png',
+                AppTheme.isDark?'assets/image/dark_bg.png':'assets/image/default_bg.png',
               ),
               fit: BoxFit.fill
           )
@@ -32,20 +33,17 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
           title: Text(args.title),
         ),
         body: Card(
-          margin: const EdgeInsets.all(20),
-          elevation: 10,
+          // TODO Qu details Screen
           child: lines.isNotEmpty ?
           ListView.separated(
               itemBuilder: (context, index) => Text(
                 '${lines[index]} (${index + 1})',
                 textDirection: TextDirection.rtl,
-                style: const TextStyle(
-                  color: Colors.black,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               separatorBuilder: (context, index) => Container(
                 height: 2,
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).dividerColor,
               ),
               itemCount: lines.length
           ) :

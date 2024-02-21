@@ -27,21 +27,14 @@ class _ThemeSheetState extends State<ThemeSheet> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          theme1,
-          style: TextStyle(
-            fontSize: 20,
-            color: Theme.of(context).primaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Icon(Icons.check, color: Theme.of(context).primaryColor,),
+        Text(theme1, style: Theme.of(context).textTheme.labelLarge,),
+        Icon(Icons.check, color: Theme.of(context).dividerColor,),
       ],
     );
   }
 
   Widget getUnselectedItem(String theme2)
   {
-    return Text(theme2, style: const TextStyle(fontSize: 18),);
+    return Text(theme2, style: Theme.of(context).textTheme.labelSmall,);
   }
 }

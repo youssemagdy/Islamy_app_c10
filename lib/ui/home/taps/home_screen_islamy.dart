@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/style/app_theme.dart';
 import 'package:islamy_app/ui/home/taps/ahadeth_widget.dart';
 import 'package:islamy_app/ui/home/taps/quran_widget.dart';
 import 'package:islamy_app/ui/home/taps/radio_widget.dart';
 import 'package:islamy_app/ui/home/taps/sebha_widget.dart';
 import 'package:islamy_app/ui/home/taps/setting_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HomeScreenIslamy extends StatefulWidget
 {
@@ -27,19 +30,17 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
   Widget build(BuildContext context)
   {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-                'assets/image/default_bg.png',
+                 AppTheme.isDark?'assets/image/dark_bg.png':'assets/image/default_bg.png',
               ),
             fit: BoxFit.fill
         )
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Islamy',
-          ),
+          title: Text(AppLocalizations.of(context)!.islami),
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentNavIndex,

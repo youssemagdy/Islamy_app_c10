@@ -27,21 +27,14 @@ class _LanguageSheetState extends State<LanguageSheet> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          language1,
-          style: TextStyle(
-            fontSize: 20,
-            color: Theme.of(context).primaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Icon(Icons.check, color: Theme.of(context).primaryColor,),
+        Text(language1, style: Theme.of(context).textTheme.labelLarge,),
+        Icon(Icons.check, color: Theme.of(context).dividerColor,),
       ],
     );
   }
 
   Widget getUnselectedItem(String language2)
   {
-    return Text(language2, style: const TextStyle(fontSize: 18),);
+    return Text(language2, style: Theme.of(context).textTheme.labelSmall,);
   }
 }

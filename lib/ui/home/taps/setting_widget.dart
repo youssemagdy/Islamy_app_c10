@@ -19,10 +19,7 @@ class _SettingWidgetState extends State<SettingWidget> {
           const Text('Language', style: TextStyle(fontSize: 20),),
           const SizedBox(height: 10,),
           InkWell(
-            onTap: ()
-            {
-              showLanguageBottomSheet();
-            },
+            onTap: () {showLanguageBottomSheet();},
             child: Container(
               alignment: Alignment.center,
               width: double.infinity,
@@ -34,22 +31,19 @@ class _SettingWidgetState extends State<SettingWidget> {
                   color: Theme.of(context).colorScheme.primary,
                 ),
               ),
-              child: const Text(
-                  'English',
-                  style: TextStyle(
-                      fontSize: 16
-                  ),
-                )
+              child: Text(
+                'English',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 20,),
           const Text('Theme', style: TextStyle(fontSize: 20),),
           const SizedBox(height: 10,),
           InkWell(
-            onTap: ()
-            {
-              showThemeBottomSheet();
-            },
+            onTap: () {showThemeBottomSheet();},
             child: Container(
                 alignment: Alignment.center,
                 width: double.infinity,
@@ -61,12 +55,12 @@ class _SettingWidgetState extends State<SettingWidget> {
                     color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
-                child: const Text(
-                  'Light',
-                  style: TextStyle(
-                      fontSize: 16
-                  ),
-                )
+              child: Text(
+                'Light',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
           ),
         ],

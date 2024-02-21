@@ -19,18 +19,8 @@ class QuranTitleWidget extends StatelessWidget
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children:
         [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 24,
-            ),
-          ),
-          Text(
-            verseNumber,
-            style: const TextStyle(
-              fontSize: 24,
-            ),
-          ),
+          Text(title, style: Theme.of(context).textTheme.labelMedium,),
+          Text(verseNumber, style: Theme.of(context).textTheme.labelMedium,),
         ],
       ),
     );

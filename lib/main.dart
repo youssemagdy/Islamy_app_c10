@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islamy_app/style/app_theme.dart';
 import 'package:islamy_app/ui/ahadeth_details/ahadth_details.dart';
-import 'package:islamy_app/ui/home/home_screen_islamy.dart';
+import 'package:islamy_app/ui/home/taps/home_screen_islamy.dart';
 import 'package:islamy_app/ui/home/quran_details/quran_deteils_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main()
 {
@@ -15,11 +17,22 @@ class MyApp extends StatelessWidget
   Widget build(BuildContext context)
   {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Islamy',
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ar'),
+      ],
+      locale: const Locale('en'),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: AppTheme.isDark?ThemeMode.dark:ThemeMode.light,
       // Navigate
       initialRoute: HomeScreenIslamy.routName,
       routes:
