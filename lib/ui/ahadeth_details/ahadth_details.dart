@@ -27,7 +27,6 @@ class AgadethDetailsScreen extends StatelessWidget
           children: [
             Expanded(
               child: Card(
-                // TODO AHADES DEDALIS SCREEN
                 child: SingleChildScrollView(
                   child: Text(
                     ahadthModel.content,

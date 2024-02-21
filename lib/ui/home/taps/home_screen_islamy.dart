@@ -60,7 +60,7 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
                     'assets/image/icon_radio.png',
                   )
               ),
-              label: 'Radio',
+              label: AppLocalizations.of(context)!.radio,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
@@ -69,7 +69,7 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
                     'assets/image/icon_sebha.png',
                   )
               ),
-              label: 'Sebha',
+              label: AppLocalizations.of(context)!.sebha,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
@@ -78,7 +78,7 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
                     'assets/image/icon_hadeth.png',
                   )
               ),
-              label: 'Ahadeth',
+              label: AppLocalizations.of(context)!.ahadeth,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
@@ -87,14 +87,14 @@ class _HomeScreenIslamyState extends State<HomeScreenIslamy> {
                     'assets/image/icon_quran.png',
                   )
               ),
-              label: 'Quran',
+              label: AppLocalizations.of(context)!.quran,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const Icon(
                     Icons.settings,
               ),
-              label: 'Setting',
+              label: AppLocalizations.of(context)!.setting,
             ),
           ],
         ),

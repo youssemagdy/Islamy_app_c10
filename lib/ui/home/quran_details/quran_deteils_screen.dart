@@ -33,7 +33,6 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
           title: Text(args.title),
         ),
         body: Card(
-          // TODO Qu details Screen
           child: lines.isNotEmpty ?
           ListView.separated(
               itemBuilder: (context, index) => Text(

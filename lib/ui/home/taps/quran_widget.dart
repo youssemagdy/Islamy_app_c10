@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/ui/home/quran_title_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranWidget extends StatelessWidget
 {
@@ -34,7 +35,7 @@ class QuranWidget extends StatelessWidget
           ),
         ),
         Text(
-          'Chapter Title',
+          AppLocalizations.of(context)!.chaptertitle,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         Expanded(

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget
         Locale('en'),
         Locale('ar'),
       ],
-      locale: const Locale('en'),
+      locale: const Locale('ar'),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: AppTheme.isDark?ThemeMode.dark:ThemeMode.light,
