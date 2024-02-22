@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/provider/setting_provider.dart';
+import 'package:provider/provider.dart';
 
 class ThemeSheet extends StatefulWidget {
   const ThemeSheet({Key? key}) : super(key: key);
@@ -9,14 +11,21 @@ class ThemeSheet extends StatefulWidget {
 class _ThemeSheetState extends State<ThemeSheet> {
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     return  Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          getSelectedItem('Light'),
+          getSelectedItem(provider.theme == ThemeMode.dark?'Dark':'Light'),
           const SizedBox(height: 15,),
-          getUnselectedItem('Dark'),
+          InkWell(
+            onTap: (){
+              Navigator.pop(context);
+              provider.changeTheme(provider.theme == ThemeMode.dark?ThemeMode.light:ThemeMode.dark);
+            },
+              child: getUnselectedItem(provider.theme == ThemeMode.dark?'Light':'Dark')
+          ),
         ],
       ),
     );

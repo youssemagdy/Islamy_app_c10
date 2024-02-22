@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy_app/style/app_theme.dart';
+import 'package:provider/provider.dart';
+
+import '../../../provider/setting_provider.dart';
 
 class QuranDetailsScreen extends StatefulWidget
 {
@@ -12,8 +15,8 @@ class QuranDetailsScreen extends StatefulWidget
 
 class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     QuranDetailsArgs args = ModalRoute.of(context)?.settings.arguments as QuranDetailsArgs;
     if (lines.isEmpty)
     {
@@ -23,7 +26,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                AppTheme.isDark?'assets/image/dark_bg.png':'assets/image/default_bg.png',
+                provider.theme == ThemeMode.dark?'assets/image/dark_bg.png':'assets/image/default_bg.png',
               ),
               fit: BoxFit.fill
           )

@@ -5,5 +5,9 @@
   "sebha":"Sebha",
   "ahadeth":"Ahadeth",
   "setting":"Setting",
-  "chaptertitle":"Chapter Title"
+  "chaptertitle":"Chapter Title",
+  "light":"Light",
+  "dark":"Dark",
+  "theme":"Theme",
+  "language":"language"
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/ui/home/taps/language_sheet.dart';
 import 'package:islamy_app/ui/home/taps/theme_sheet.dart';
+import 'package:provider/provider.dart';
+import '../../../provider/setting_provider.dart';
+// TODO STOPET HERE IN 12:00
 
 class SettingWidget extends StatefulWidget {
   const SettingWidget({Key? key}) : super(key: key);
@@ -11,6 +14,7 @@ class SettingWidget extends StatefulWidget {
 class _SettingWidgetState extends State<SettingWidget> {
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -19,7 +23,9 @@ class _SettingWidgetState extends State<SettingWidget> {
           const Text('Language', style: TextStyle(fontSize: 20),),
           const SizedBox(height: 10,),
           InkWell(
-            onTap: () {showLanguageBottomSheet();},
+            onTap: () {
+              showLanguageBottomSheet();
+            },
             child: Container(
               alignment: Alignment.center,
               width: double.infinity,
@@ -32,7 +38,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 ),
               ),
               child: Text(
-                'English',
+                provider.language == 'ar'?'العربية':'English',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: Theme.of(context).primaryColor,
                 ),
@@ -43,7 +49,9 @@ class _SettingWidgetState extends State<SettingWidget> {
           const Text('Theme', style: TextStyle(fontSize: 20),),
           const SizedBox(height: 10,),
           InkWell(
-            onTap: () {showThemeBottomSheet();},
+            onTap: () {
+              showThemeBottomSheet();
+            },
             child: Container(
                 alignment: Alignment.center,
                 width: double.infinity,
@@ -56,7 +64,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                   ),
                 ),
               child: Text(
-                'Light',
+                provider.theme == ThemeMode.dark?'Dark':'Light',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: Theme.of(context).primaryColor,
                 ),

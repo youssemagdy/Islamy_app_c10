@@ -1,9 +1,13 @@
 {
-  "islami":"اسلامي",
-  "quran":"قرأن",
-  "radio":"راديو",
-  "sebha":"سيبحه",
-  "ahadeth":"احاديث",
-  "setting":"اعدادات",
-  "chaptertitle":"اسم الصورة"
+  "islami":"Islami",
+  "quran":"Quran",
+  "radio":"Radio",
+  "sebha":"Sebha",
+  "ahadeth":"Ahadeth",
+  "setting":"Setting",
+  "chaptertitle":"Chapter Title",
+  "light":"مضئ",
+  "dark":"مظلم",
+  "theme":"الوضع",
+  "language":"اللغة"
 }
