@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget
         Locale('ar'),
       ],
       locale: Locale(provider.language),
+
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: provider.theme,

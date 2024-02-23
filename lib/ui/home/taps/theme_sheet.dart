@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/provider/setting_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class ThemeSheet extends StatefulWidget {
   const ThemeSheet({Key? key}) : super(key: key);
@@ -17,14 +19,18 @@ class _ThemeSheetState extends State<ThemeSheet> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          getSelectedItem(provider.theme == ThemeMode.dark?'Dark':'Light'),
+          getSelectedItem(
+              provider.theme == ThemeMode.dark?AppLocalizations.of(context)!.dark:AppLocalizations.of(context)!.light
+          ),
           const SizedBox(height: 15,),
           InkWell(
             onTap: (){
               Navigator.pop(context);
               provider.changeTheme(provider.theme == ThemeMode.dark?ThemeMode.light:ThemeMode.dark);
             },
-              child: getUnselectedItem(provider.theme == ThemeMode.dark?'Light':'Dark')
+              child: getUnselectedItem(
+                  provider.theme == ThemeMode.dark?AppLocalizations.of(context)!.light:AppLocalizations.of(context)!.dark
+              )
           ),
         ],
       ),
